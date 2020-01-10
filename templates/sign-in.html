@@ -58,10 +58,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								<p><a href="#">Click Here</a> </p>
 								<div class="clearfix"> </div>
 							</div>
-							<form>
+							<form method="POST">
+								{% csrf token %}
 							<div class="log-input">
 								<div class="log-input-left">
-								   <input type="text" class="user" value="Yourname" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email address:';}"/>
+								   <input type="text" class="user" value="Yourname" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email address:';}" name = "username"/>
 								</div>
 								<span class="checkbox2">
 									 <label class="checkbox"><input type="checkbox" name="checkbox" checked=""><i> </i></label>
@@ -70,7 +71,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							</div>
 							<div class="log-input">
 								<div class="log-input-left">
-								   <input type="password" class="lock" value="password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email address:';}"/>
+								   <input type="password" class="lock" value="password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email address:';}" name = "password"/>
 								</div>
 								<span class="checkbox2">
 									 <label class="checkbox"><input type="checkbox" name="checkbox" checked=""><i> </i></label>
