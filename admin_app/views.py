@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from front_app.models import UserRole
 from django.contrib.auth.models import User
 
 
@@ -13,4 +14,6 @@ def sign_in(request):
 
 
 def sign_up(request):
-    return render(request, 'sign-up.html')
+    users_role = UserRole.objects.all()
+    data = users_role[1:]
+    return render(request, 'sign-up.html', {"users_role": data})
