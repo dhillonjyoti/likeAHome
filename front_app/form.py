@@ -11,4 +11,4 @@ class UserRoleForm(forms.ModelForm):
 class RoleDetailsForm(forms.ModelForm):
     class Meta:
         model = RoleDetails
-        exclude = ['name','email','password','address','gender','verify_link','otp','otp_time','is_active']
+        exclude = ['name', 'email', 'password', 'address', 'gender', 'verify_link', 'otp', 'otp_time', 'is_active']

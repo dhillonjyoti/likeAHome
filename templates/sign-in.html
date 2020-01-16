@@ -7,7 +7,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>Easy Admin Panel an Admin Panel Category Flat Bootstrap Responsive Website Template | Sign In :: w3layouts</title>
+<title>Sign In</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="keywords" content="Easy Admin Panel Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
@@ -53,29 +53,23 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<div class="signin">
 							<div class="signin-rit">
 								<span class="checkbox1">
-									 <label class="checkbox"><input type="checkbox" name="checkbox" checked="">Forgot Password ?</label>
+									 <label class="checkbox"><input type="checkbox" name="checkbox">Forgot Password ?</label>
 								</span>
 								<p><a href="#">Click Here</a> </p>
 								<div class="clearfix"> </div>
 							</div>
 							<form method="POST">
-								{% csrf token %}
+								{% csrf_token %}
 							<div class="log-input">
 								<div class="log-input-left">
 								   <input type="text" class="user" value="Yourname" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email address:';}" name = "username"/>
 								</div>
-								<span class="checkbox2">
-									 <label class="checkbox"><input type="checkbox" name="checkbox" checked=""><i> </i></label>
-								</span>
 								<div class="clearfix"> </div>
 							</div>
 							<div class="log-input">
 								<div class="log-input-left">
 								   <input type="password" class="lock" value="password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email address:';}" name = "password"/>
 								</div>
-								<span class="checkbox2">
-									 <label class="checkbox"><input type="checkbox" name="checkbox" checked=""><i> </i></label>
-								</span>
 								<div class="clearfix"> </div>
 							</div>
 							<input type="submit" value="Login to your account">
@@ -85,7 +79,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<h4>For New People</h4>
 							<p>Having hands on experience in creating innovative designs,I do offer design 
 								solutions which harness.</p>
-							<a href="sign-up.html">Register Now!</a>
+							<a href="sign_up/">Register Now!</a>
 						</div>
 					</div>
 				</div>
