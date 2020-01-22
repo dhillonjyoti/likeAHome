@@ -1,9 +1,3 @@
-<!--
-Author: W3layouts
-Author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
--->
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -36,7 +30,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!----webfonts--->
 <!---//webfonts--->
  <!-- Meters graphs -->
-<script src="assets/back_js/jquery-1.10.2.min.js"></script>
+<script src="/assets/back_js/jquery-1.10.2.min.js"></script>
 <!-- Placed js at the end of the document so the pages load faster -->
 
 </head> 
@@ -54,6 +48,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<h5>Personal Information</h5>
 								<div class="sign-u">
 									<div class="sign-up1">
+										{% if users_role %}
 										<h4>Select Role* :</h4>
 									</div>
 									<div class="sign-up2">
@@ -62,10 +57,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 										<option>Select Role</option>
 											{% if users_role %}
 											{% for i in users_role %}
-											<option value="i.role_id">{{ i.role_name }}</option>
+											<option value="{{ i.role_id }}">{{ i.role_name }}</option>
 											{% endfor %}
 											{% else %}
 											<option>Data not found</option>
+											{% endif %}
 											{% endif %}
 										</select>
 									</div>
@@ -76,7 +72,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 									</div>
 									<div class="sign-up2">
 
-											<input type="text" placeholder=" " required=" "/>
+											<input type="text" placeholder=" " required=" " name = "first_name"/>
 
 									</div>
 									<div class="clearfix"> </div>
@@ -87,18 +83,19 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 									</div>
 									<div class="sign-up2">
 
-											<input type="text" placeholder=" " required=" "/>
+											<input type="text" placeholder=" " required=" " name="last_name"/>
 
 									</div>
 									<div class="clearfix"> </div>
 								</div>
+
 								<div class="sign-u">
 									<div class="sign-up1">
 										<h4>Email Address* :</h4>
 									</div>
 									<div class="sign-up2">
 
-											<input type="text" placeholder=" " required=" "/>
+											<input type="text" placeholder=" " required=" " name="email"/>
 
 									</div>
 									<div class="clearfix"> </div>
@@ -110,7 +107,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 									</div>
 									<div class="sign-up2">
 
-											<input type="password" placeholder=" " required=" "/>
+											<input type="password" placeholder=" " required=" " name="password"/>
 
 									</div>
 									<div class="clearfix"> </div>
@@ -121,7 +118,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 									</div>
 									<div class="sign-up2">
 
-											<input type="password" placeholder=" " required=" "/>
+											<input type="password" name="c_pass" placeholder=" " />
 
 									</div>
 									<div class="clearfix"> </div>
@@ -142,7 +139,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				</div>
 			<!--footer section start-->
 				<footer>
-				   <p>&copy 2015 Easy Admin Panel. All Rights Reserved | Design by <a href="https://w3layouts.com/" target="_blank">w3layouts.</a></p>
+					<p>A Website for those who are looking for new place <b>Like A Home</b></p>
 				</footer>
 			<!--footer section end-->
 				</div>
@@ -151,9 +148,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 
 	
-<script src="assets/back_js/jquery.nicescroll.js"></script>
-<script src="assets/back_js/scripts.js"></script>
+<script src="/assets/back_js/jquery.nicescroll.js"></script>
+<script src="/assets/back_js/scripts.js"></script>
 <!-- Bootstrap Core JavaScript -->
-   <script src="assets/back_js/bootstrap.min.js"></script>
+   <script src="/assets/back_js/bootstrap.min.js"></script>
 </body>
 </html>
