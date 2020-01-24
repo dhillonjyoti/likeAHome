@@ -7,3 +7,6 @@ def front_index(request):
 
 def sign_in(request):
     return render(request, "sign-in.html")
+
+def log_in(request):
+    return render(request, 'log_in.html')
