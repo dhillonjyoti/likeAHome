@@ -57,4 +57,9 @@ def sign_up(request):
             data.append(i)
     return render(request, 'sign-up.html', {"users_role": data})
 
+def user_verify(request):
+    return render(request, 'user_verify')
+
+
+
 
