@@ -48,7 +48,12 @@ def sign_up(request):
                 form.password = make_password(request.POST["password"])
             else:
                 return HttpResponse("passsword dont match")
+            token = make_password(generate_random_string()).replace("+", "")
+            form.verify_link = token
+            link = "127.0.0.1:8000/verify/?link={}".format(token)
             form.save()
+            verify_link_send(request.POST["email"], request.POST['first_name'], link)
+            return redirect("/")
         else:
             return HttpResponse("Form not valid")
     users_role = UserRole.objects.all()
