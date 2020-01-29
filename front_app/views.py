@@ -17,6 +17,7 @@ def sign_in(request):
                 if data.is_active == 1:
                     role = data.role.role_name
                     request.session['auth'] = True
+                    request.session['name'] = data.first_name
                     request.session['role'] = role
                     if role == "admin":
                         return redirect("/admin_index/")

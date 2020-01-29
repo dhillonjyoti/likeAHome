@@ -26,4 +26,5 @@ urlpatterns = [
     url(r'^$', views.front_index),
     url(r'^sign_up/$', backend.sign_up),
     url(r'^verify/$', backend.user_verify),
+    url(r'^logout/$', backend.user_logout),
 ]

@@ -5,6 +5,7 @@ from django.contrib.auth.hashers import make_password
 from miscFiles.verification_mail import verify_link_send
 from miscFiles.generic_functions import generate_random_string
 from miscFiles.authenticate import authentication
+from django.contrib.auth.views import logout
 
 
 def admin_signup(request):
@@ -85,10 +86,11 @@ def admin_index(request):
             if msg == "invalid_user":
                 return HttpResponse("invalid user")
             elif msg == "not_login":
-                return HttpResponse("not login")
+                return redirect("/")
     except:
-        return HttpResponse("not login")
+        return redirect("/")
 
 
-def logout(request):
-    pass
+def user_logout(request):
+    logout(request)
+    return redirect("/sign_in/")
