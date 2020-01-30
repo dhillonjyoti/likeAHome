@@ -39,7 +39,7 @@ def sign_up(request):
         detail_form = RoleDetailsForm(request.POST)
         if detail_form.is_valid():
             form = detail_form.save(commit=False)
-            form.role_id_id = int(request.POST['role'])
+            form.role_id = int(request.POST['role'])
             form.first_name = request.POST['first_name']
             form.last_name = request.POST['last_name']
             form.email = request.POST["email"]
