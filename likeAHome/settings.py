@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'admin_app',
     'front_app',
+    'pg_app',
 ]
 
 MIDDLEWARE = [
